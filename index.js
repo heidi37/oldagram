@@ -28,3 +28,60 @@ const posts = [
     }
 ]
 
+const individualPost = document.getElementById('individual-post')
+const avatar = document.getElementById('avatar')
+
+for(let i = 0; i < posts.length; i++) {
+    console.log(posts[i].avatar)
+    individualPost.innerHTML += `
+    <section>
+        <div class="container image-name-location" id="avatar">
+          <img
+            class="img-user"
+            id="avatar"
+            src="${posts[i].avatar}"
+            alt="${posts[i].name}"
+          />
+          <div class="name-location">
+            <p class="name">
+            ${posts[i].name}<br />
+              <span class="location">${posts[i].location}</span>
+            </p>
+          </div>
+        </div>
+    </section>
+    <section>
+        <div class="post">
+          <img
+            src="${posts[i].post}"
+            alt="${posts[i].name}"
+          />
+        </div>
+        <div class="container likes-comments">
+          <div class="icons">
+            <img
+              class="icon-heart"
+              src="images/icon-heart.png"
+              alt="heart icon"
+            />
+            <img
+              class="icon-comment"
+              src="images/icon-comment.png"
+              alt="comment icon"
+            />
+            <img class="icon-dm" src="images/icon-dm.png" alt="dm icon" />
+          </div>
+          <div class="likes">
+            <p>${posts[i].likes} likes</p>
+          </div>
+          <div class="comments">
+            <p>
+              <span class="username">${posts[i].username}</span> ${posts[i].comment}
+            </p>
+          </div>
+        </div>
+      </section>
+    `
+
+}
+

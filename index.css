@@ -1,7 +1,8 @@
+/* Element Selectors */
+
 html, body {
     margin: 0 auto;
     padding: 0;
-    
 }
 
 body {
@@ -17,6 +18,8 @@ header, section {
 header {
     border-bottom: 1px solid #c6c6c6;
 }
+
+/* Class Selectors */
 
 .content {
     width: 375px;
@@ -34,35 +37,6 @@ header {
     align-items: flex-start;
 }
 
-.image-name-location,
-.likes-comments {
-    display: flex;
-}
-
-.container.image-name-location {
-    justify-content: flex-start;
-}
-
-.name, .likes, .username {
-    font-weight: bold;
-}
-
-.location {
-    font-weight: normal;
-}
-
-.likes-comments {
-    flex-direction: column;
-}
-
-.name-location {
-    margin-left: 10px;
-}
-
-.individual-post header {
-    display: flex;
-}
-
 .img-logo {
     width: 127px;
 }
@@ -72,7 +46,33 @@ header {
     height: 34px;
     border-radius: 50%;
     align-self: center;
-    /* padding: 10px; */
+    padding-right: 6px;
+}
+
+.image-name-location,
+.likes-comments,
+.individual-post header {
+    display: flex;
+}
+
+.container.image-name-location {
+    justify-content: flex-start;
+}
+
+.individual-post header {
+    display: flex;
+}
+
+.name, .likes, .username {
+    font-weight: bold;
+}
+
+.name-location {
+    margin-left: 4px;
+}
+
+.location {
+    font-weight: normal;
 }
 
 .post img {
@@ -84,6 +84,10 @@ header {
     margin-right: 10px;
     margin-top: 7px;
     margin-bottom: 0;
+}
+
+.likes-comments {
+    flex-direction: column;
 }
 
 .likes-comments {
